@@ -1,0 +1,25 @@
+Giancarlo Klemm Camilo
+
+Description:
+	A peer-to-peer chat with a simple console UI.
+	This program assumes that a ring network will be used.
+	Example:
+		A -> B -> C -> A -> B...
+
+Compiling:
+	To create the executable simply use the 'make' command inside the chat folder.
+
+Running:
+	./chat [ID] [IP address] [PORT_IN] [PORT_IN] [PORT_OUT]
+
+	ID - Your unique ID.
+	IP address - The address of the next computer
+	PORT_IN - The socket from which you receive messages.
+	PORT_OUT - The socket where you send messages to.
+
+	Example for a 4-people(A,B,C and D) chat in the same computer (Used for test):
+
+		A: ./chat 0 127.0.0.1 8888 8889
+		A: ./chat 1 127.0.0.1 8889 8890
+		A: ./chat 2 127.0.0.1 8890 8891
+		A: ./chat 3 127.0.0.1 8891 8888
